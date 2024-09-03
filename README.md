@@ -1,4 +1,4 @@
-# 🚀Assignment1🚀⚙️✨
+# 🚀Assignment1🚀
 
 ## 📚Strapi
 
@@ -145,7 +145,11 @@ Strapi คือ โปรแกรม headless CMS ที่เป็นโอ�
     - https://www.facebook.com/photo.php?fbid=951249207003076&id=100063540163933&set=a.683592353768764
     - https://chatgpt.com
    
-  ## 🤫Steps to Install Strapi
+## 🤫Steps to Install Strapi
+
+## ⚙️Steps Push Code to GitHub
+
+## ✨Steps to Deploy
 
   
 
