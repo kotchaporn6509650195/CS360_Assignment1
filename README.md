@@ -150,6 +150,29 @@ Strapi คือ โปรแกรม headless CMS ที่เป็นโอ�
 
 ## ⚙️Steps Push Code to GitHub
 
+#### 1. Create repository
+
+สร้าง repository ที่ https://github.com
+
+#### 2. Downlode Git Bash
+
+ดาวน์โหลด Git Bash ที่ https://git-scm.com/download/win
+
+#### 3. Push code in GitHub
+
+```
+git -v # check version Git
+
+cd <ชื่อ project> # change project
+git init # create new Git repository in current directory
+git config --global user.name <Name> # name the username
+git config --global user.email <Email> # name the email
+git remote add <Name remote> <remote repository URL> # setting repository for connect repository in GitHub
+git branch -M main # create branch for keep code
+
+git add . # add all directory
+git push -u <Name remote> main # record remote repository
+```
 
 ## ✨Steps to Deploy
 
