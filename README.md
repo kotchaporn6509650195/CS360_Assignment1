@@ -173,12 +173,86 @@ Strapi คือ โปรแกรม headless CMS ที่เป็นโอ�
 Console Home -> Click EC2 -> Instances -> Right Click on Instances desired -> Connect -> Copy code ตรง Example และแก้ directory key.pem ในโค้ดให้ตรงกับเครื่อง
 
 #### 3. Update APT & Install package
-'''
+
+```
 sudo apt update # update apt
 sudo apt install npm # install Node Package Manager
 sudo npm install yarn -g # install Yarn
 sudo apt install git # install Git
 sudo npm install pm2 -g # install for manage process
+```
+#### 4. Create directory for run project
+
+```
+mkdir <Name directory> # Create directory
+cd <Name directory> # Change directory
+```
+
+#### 5. Slone project from GitHub to EC2
+
+```
+git clone <remote repository URL> # clone project
+cd <Name directory project> # change directory of project 
+yarn install # install package
+```
+
+#### 6. Setup .env
+
+```
+cp .env.example .env # create .env by copy .env.example
+nano .env # edit HOST, PORT, Key, Token in .env
+```
+
+#### 7. Build project
+
+```
+NODE_ENV=production yarn build
+```
+
+#### 8. Create file for run project
+
+```
+cd .. # leave directory
+pm2 init # create ecosystem.config.js for run project
+sudo nano ecosystem.config.js # edit file for run project
+```
+
+#### 9. Edit file for run project
+
+```
+sudo nano ecosystem.config.js # edit file for run project
+module.exports = {
+  apps: [
+    {
+      name: 'strapi-deploy',
+      cwd: '/home/ubuntu/strapi/CS360-Assignment1',
+      script: 'yarn',
+      args: 'start',
+      env: {
+        APP_KEYS: process.env.API_KEYS,
+        API_TOKEN_SALT: process.env.API_TOKEN_SALT,
+        ADMIN_JWT_SECRET: process.env.ADMIN_JWT_SECRET,
+        JWT_SECRET: process.env.JWT_SECRET,
+        NODE_ENV: 'production',
+      },
+    },
+  ],
+};
+```
+
+#### 10. Deploy Project
+
+```
+pm2 start ecosystem.config.js
+```
+
+
+
+
+
+
+
+
 
 
 
