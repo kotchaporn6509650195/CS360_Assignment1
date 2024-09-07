@@ -203,6 +203,7 @@ git remote add <Name remote> <remote repository URL> # setting repository for co
 git branch -M main # create branch for keep code
 
 git add . # add all directory
+git commit -m "Message" # Save local repository
 git push -u <Name remote> main # record remote repository
 ```
 
