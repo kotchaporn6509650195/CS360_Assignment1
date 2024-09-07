@@ -147,12 +147,38 @@ Strapi คือ โปรแกรม headless CMS ที่เป็นโอ�
    
 ## 🤫Steps to Install Strapi
 
+
 ## ⚙️Steps Push Code to GitHub
+
 
 ## ✨Steps to Deploy
 
-  
+#### 1. Launch an EC2 Instance
 
+   - ตั้งชื่อ Instance
+   - เลือก AMI Ubuntu Server 24.04 LTS (HVM), SSD Volume Type 64-bit
+   - เลือก Instance type t2.small
+   - เลือก Key pair
+   - Network settings เลือก Edit สร้าง security group
+     - Type: SSH, Protocol: TCP, Port Range: 22, Source type: Custom, Source: 0.0.0.0/0
+     - Type: SSH, Protocol: TCP, Port Range: 22, Source type: Custom, Source: ::/0
+     - Type: HTTP, Protocol: TCP, Port Range: 80, Source type: Custom, Source: 0.0.0.0/0, ::/0
+     - Type: HTTPS, Protocol: TCP, Port Range: 443, Source type: Custom, Source: 0.0.0.0/0, ::/0
+     - Type: Custom TCP, Protocol: TCP, Port Range: 1337, Source type: Custom, Source: 0.0.0.0/0
+   - Configure storage กำหนดให้เป็น 1 x 8 GiB gp2 Root volume
+   - Launch instance
+
+#### 2. Connect Instance
+
+Console Home -> Click EC2 -> Instances -> Right Click on Instances desired -> Connect -> Copy code ตรง Example และแก้ directory key.pem ในโค้ดให้ตรงกับเครื่อง
+
+#### 3. Update APT & Install package
+'''
+sudo apt update # update apt
+sudo apt install npm # install Node Package Manager
+sudo npm install yarn -g # install Yarn
+sudo apt install git # install Git
+sudo npm install pm2 -g # install for manage process
 
 
 
