@@ -195,7 +195,7 @@ yarn develop # Run project
 ```
 git -v # check version Git
 
-cd <ชื่อ project> # change project
+cd <Name project> # change project
 git init # create new Git repository in current directory
 git config --global user.name <Name> # name the username
 git config --global user.email <Email> # name the email
