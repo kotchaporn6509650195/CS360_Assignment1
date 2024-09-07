@@ -147,6 +147,38 @@ Strapi คือ โปรแกรม headless CMS ที่เป็นโอ�
    
 ## 🤫Steps to Install Strapi
 
+#### 1. Downlode npm and node.js
+
+ดาวน์โหลด npm and node.js ที่ [https://git-scm.com/download/win](https://nodejs.org/en/download/prebuilt-installer)
+
+#### 2. Check version
+
+```
+node -v # check version Node.js
+npm -v # check version Node Package Manager
+```
+
+#### 3. Install Yarn for install Strapi
+
+```
+npm install -g yarn # install yarn
+yarn -v # check version yarn
+```
+
+#### 4. Create Strapi project
+
+```
+yarn create strapi-app <Name project>
+-> choose quickstart
+-> choose skip
+```
+
+#### 5. Run
+
+```
+cd <Name project> # change directory project
+yarn develop # Run project 
+```
 
 ## ⚙️Steps Push Code to GitHub
 
